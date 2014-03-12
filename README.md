@@ -3,28 +3,28 @@
 How many time did you write:
 
 <code>
-echo '<pre>';
+echo '&lt;pre&gt;';
 print_r($array);
-echo '</pre>'
+echo '&lt;/pre&gt;';
 </code>
 
 I am quite sure you know what I mean. So I created th debugVar function.
 
-<h3>INSTALL</h3>
+<h3>Installation</h3>
 
 Put this function in a file that your project load by default.
 
-INSTALL FOR CODEIGNITER
+<h3>Installation for Codeigniter</h3>
 
 Create a debug_helper.php in application/helpers folder and put the
 function there. Then in config/autoload.php insert the debug_helper
 in the autoload helper list.
 
-INSTALL FOR WORDPRESS
+<h3>Installation for Wordpress</h3>
 
 Simply put this function in your functions.php
 
-HOW TO USE
+<h3>How to use</h3>
 
 If you want know the content of your var, simply put it in the function, like this:
 
