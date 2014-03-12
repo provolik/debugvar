@@ -2,11 +2,11 @@
 
 How many time did you write:
 
-<code>
+<pre>
 echo '&lt;pre&gt;';
 print_r($array);
 echo '&lt;/pre&gt;';
-</code>
+</pre>
 
 I am quite sure you know what I mean. So I created th debugVar function.
 
