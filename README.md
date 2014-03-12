@@ -1,14 +1,16 @@
-DEBUG VAR FUNCTION FOR PHP
+<h2>DEBUG VAR FUNCTION FOR PHP</h2>
 
 How many time did you write:
 
+<code>
 echo '<pre>';
 print_r($array);
 echo '</pre>'
+</code>
 
 I am quite sure you know what I mean. So I created th debugVar function.
 
-INSTALL
+<h3>INSTALL</h3>
 
 Put this function in a file that your project load by default.
 
