@@ -9,6 +9,16 @@ function debugvar() {
 
     $vars = array();
 
+    if($show) {
+        $open = '<pre>';
+        $close = '</pre>';
+        $br = '<br />';
+    } else {
+        $open = '<!--';
+        $close = '-->';
+        $br = "\r\n";
+    }
+
     foreach($args as $arg) {
         if(is_bool($arg)) {
             if($bool == 0) $die = $arg;
@@ -20,18 +30,24 @@ function debugvar() {
         }
     }
 
-    if ($show) echo '<pre>';
-    else echo '<!--';
+    echo $open;
 
     $bt = debug_backtrace();
-    echo 'Called from <b>'.$bt[0]['file'].'</b> line <b>'.$bt[0]['line'].'</b>'.'<br />';
+    $bt_string = 'DebugVar called from <b>'.$bt[0]['file'].'</b> line <b>'.$bt[0]['line'].'</b>'.$br;
 
-    foreach($vars as $var) print_r($var);
+    $i = 1;
+    foreach($vars as $var) {
+        echo $bt_string;
+        echo 'Variable ' . $i . $br;
+        print_r($var);
+        echo $br.$br;
+        $i++;
+    }
 
-    if ($show) echo '</pre>';
-    else echo '-->';
+    echo $close;
 
     if ($die) die();
+
 }
 
 ?>

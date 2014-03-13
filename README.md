@@ -8,7 +8,7 @@ print_r($array);
 echo '&lt;/pre&gt;';
 </pre>
 
-I am quite sure you know what I mean. So I created th debugVar function.
+I am quite sure you know what I mean. So I created the debugVar function.
 
 <h3>Installation</h3>
 
