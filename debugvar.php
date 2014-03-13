@@ -9,16 +9,6 @@ function debugvar() {
 
     $vars = array();
 
-    if($show) {
-        $open = '<pre>';
-        $close = '</pre>';
-        $br = '<br />';
-    } else {
-        $open = '<!--';
-        $close = '-->';
-        $br = "\r\n";
-    }
-
     foreach($args as $arg) {
         if(is_bool($arg)) {
             if($bool == 0) $die = $arg;
@@ -28,6 +18,16 @@ function debugvar() {
         } else {
             $vars[] = $arg;
         }
+    }
+
+    if($show) {
+        $open = '<pre>';
+        $close = '</pre>';
+        $br = '<br />';
+    } else {
+        $open = '<!--';
+        $close = '-->';
+        $br = "\r\n";
     }
 
     echo $open;
