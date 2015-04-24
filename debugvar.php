@@ -20,14 +20,14 @@ function debugvar() {
         }
     }
 
+    $open = '<!--';
+    $close = '-->';
+    $br = "\r\n";
+
     if($show) {
         $open = '<pre>';
         $close = '</pre>';
         $br = '<br />';
-    } else {
-        $open = '<!--';
-        $close = '-->';
-        $br = "\r\n";
     }
 
     echo $open;
