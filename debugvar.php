@@ -49,5 +49,3 @@ function debugvar() {
     if ($die) die();
 
 }
-
-?>
