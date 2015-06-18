@@ -41,7 +41,6 @@ function debugvar_hide()
     $vars = func_get_args();
 
     call_user_func_array('debugvar', $vars);
-    die();
 }
 
 function debugvar_get_delimiters()
