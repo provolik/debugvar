@@ -28,13 +28,18 @@ Simply put this function in your functions.php
 
 If you want know the content of your var, simply put it in the function, like this:
 
-debugVar($variables);
+debugvar($variables);
 
 You can pass to it how many vars you want:
 
-debugVar($var1, $var2, $var3, $var4);
+debugvar($var1, $var2, $var3, $var4);
 
-You can pass to it two booleans. The first one, if true, will call a die() after
-the print, the second one, if true, will change the PRE tags with <!-- and -->
-so you can print your debug in a production project without show anything.
+Often you need to show the var and then call a die:
 
+debugvar_die($variables);
+
+In other circumstances, for example in production environment, you need to print a var in hide mode:
+
+debugvar_hide($variables);
+
+And that's all.
