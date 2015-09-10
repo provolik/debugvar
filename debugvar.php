@@ -1,5 +1,15 @@
 <?php
 
+function debugmode($on = true, $mode = -1) {
+    ini_set('display_errors', $on);
+
+    if ($mode == -1) {
+        $mode = E_ERROR | E_PARSE | E_WARNING;
+    }
+
+    error_reporting($mode);
+}
+
 function debugvar()
 {
     $vars = func_get_args();
