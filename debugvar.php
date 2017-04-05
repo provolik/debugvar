@@ -1,5 +1,7 @@
 <?php
 
+define('COMMENT_DELIMITERS_COMMAND', 'DEBUGVAR_USE_COMMENT_DELIMITERS');
+
 function debugmode($on = true, $mode = -1) {
     ini_set('display_errors', $on);
 
@@ -13,8 +15,11 @@ function debugmode($on = true, $mode = -1) {
 function debugvar()
 {
     $vars = func_get_args();
+    $d = debugvar_get_delimiters($vars);
 
-    $d = debugvar_get_delimiters();
+    if ($vars[0] == COMMENT_DELIMITERS_COMMAND) {
+        unset($vars[0]);
+    }
 
     $backtrace = debug_backtrace();
     if (defined('DEBUGVAR_INDIRECT_CALL')) {
@@ -45,15 +50,15 @@ function debugvar_hide()
     // tell debugvar() to use the original backtrace
     define('DEBUGVAR_INDIRECT_CALL', true);
 
-    // tell debugvar_get_delimiters() we want comments
-    define('DEBUGVAR_USE_COMMENT_DELIMITERS', true);
-
     $vars = func_get_args();
+
+    // tell debugvar_get_delimiters() we want comments
+    array_unshift($vars, COMMENT_DELIMITERS_COMMAND);
 
     call_user_func_array('debugvar', $vars);
 }
 
-function debugvar_get_delimiters()
+function debugvar_get_delimiters($vars)
 {
     if (php_sapi_name() == 'cli') {
         // we don't mind about comments if we are in the CLI SAPI
@@ -74,7 +79,7 @@ function debugvar_get_delimiters()
         'strong_end'    => '</strong>',
     );
 
-    if (defined('DEBUGVAR_USE_COMMENT_DELIMITERS')) {
+    if ($vars[0] == COMMENT_DELIMITERS_COMMAND) {
         // we want to show the
         $delimiters = array(
             'open'          => '<!--',
@@ -116,7 +121,7 @@ function debugvar_print_variables($vars, $delimiters)
 function debugvar_print_backtrace_string($backtrace, $d)
 {
     printf(
-        'debugvar() called in %s at line %s%s',
+        debug_backtrace()[1]['function'] . '() called in %s at line %s%s',
         $d['strong_start'] . $backtrace['file'] . $d['strong_end'],
         $d['strong_start'] . $backtrace['line'] . $d['strong_end'],
         $d['br'] . $d['br']
