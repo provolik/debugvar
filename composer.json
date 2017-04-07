@@ -1,0 +1,17 @@
+{
+  "name": "provolik/debugvar",
+  "type": "library",
+  "description": "Debugvar is a PHP library to debug variables.",
+  "keywords": ["debug", "print_r", "vardump"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Michele Provolo",
+      "name": "Cesare D'Amico",
+      "name": "Emiliano Gabrielli"
+    }
+  ],
+  "require": {
+    "php": "^5.3.3|^7.0"
+  }
+}
