@@ -7,6 +7,12 @@
   "authors": [
     {
       "name": "Michele Provolo"
+    },
+    {
+      "name": "Cesare D'Amico"
+    },
+    {
+      "name": "Emiliano Gabrielli"
     }
   ],
   "require": {
