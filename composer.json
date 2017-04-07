@@ -6,9 +6,7 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Michele Provolo",
-      "name": "Cesare D'Amico",
-      "name": "Emiliano Gabrielli"
+      "name": "Michele Provolo"
     }
   ],
   "require": {
