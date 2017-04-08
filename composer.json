@@ -16,6 +16,7 @@
       "name": "Emiliano Gabrielli"
     }
   ],
+  "minimum-stability": "stable",
   "require": {
     "php": ">=5.3.3"
   }
