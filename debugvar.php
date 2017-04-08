@@ -17,7 +17,7 @@ function debugvar()
     $vars = func_get_args();
     $d = debugvar_get_delimiters($vars);
 
-    if ($vars[0] == COMMENT_DELIMITERS_COMMAND) {
+    if (isset($vars[0]) && $vars[0] == COMMENT_DELIMITERS_COMMAND) {
         unset($vars[0]);
     }
 
@@ -79,7 +79,7 @@ function debugvar_get_delimiters($vars)
         'strong_end'    => '</strong>',
     );
 
-    if ($vars[0] == COMMENT_DELIMITERS_COMMAND) {
+    if (isset($vars[0]) && $vars[0] == COMMENT_DELIMITERS_COMMAND) {
         // we want to show the
         $delimiters = array(
             'open'          => '<!--',
