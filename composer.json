@@ -6,7 +6,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Michele Provolo"
+      "name": "Michele Provolo",
+      "email": "michele.provolo@sigmaserv.it"
     },
     {
       "name": "Cesare D'Amico"
@@ -16,6 +17,6 @@
     }
   ],
   "require": {
-    "php": "^5.3.3|^7.0"
+    "php": ">=5.3.3"
   }
 }
