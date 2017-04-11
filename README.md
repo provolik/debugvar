@@ -12,17 +12,9 @@ I am quite sure you know what I mean. So I created the debugVar function.
 
 <h3>Installation</h3>
 
-Put this function in a file that your project load by default.
+You can install it using composer from command line:
 
-<h3>Installation for Codeigniter</h3>
-
-Create a debug_helper.php in application/helpers folder and put the
-function there. Then in config/autoload.php insert the debug_helper
-in the autoload helper list.
-
-<h3>Installation for Wordpress</h3>
-
-Simply put this function in your functions.php
+composer require provolik/debugvar
 
 <h3>How to use</h3>
 
