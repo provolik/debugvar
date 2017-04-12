@@ -10,8 +10,8 @@
       "email": "michele.provolo@sigmaserv.it"
     },
     {
-        "name": "debugVar contributors",
-        "homepage": "https://github.com/provolik/debugvar/graphs/contributors"
+      "name": "debugVar contributors",
+      "homepage": "https://github.com/provolik/debugvar/graphs/contributors"
     }
   ],
   "minimum-stability": "stable",
