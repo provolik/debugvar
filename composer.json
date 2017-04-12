@@ -10,10 +10,8 @@
       "email": "michele.provolo@sigmaserv.it"
     },
     {
-      "name": "Cesare D'Amico"
-    },
-    {
-      "name": "Emiliano Gabrielli"
+      "name": "debugVar contributors",
+      "homepage": "https://github.com/provolik/debugvar/graphs/contributors"
     }
   ],
   "minimum-stability": "stable",
